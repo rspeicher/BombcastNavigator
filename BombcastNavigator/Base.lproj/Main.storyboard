@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="isk-lv-Fng">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Bombcasts-->
+        <scene sceneID="PXF-Az-X4X">
+            <objects>
+                <tableViewController id="wym-ab-Mp3" customClass="BombcastTableViewController" customModule="BombcastNavigator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="kW2-E7-cze">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BombcastCell" textLabel="nSX-lY-aJg" detailTextLabel="bEm-aC-Rs5" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="HNc-W0-Hp5" customClass="BombcastTableViewCell" customModule="BombcastNavigator" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HNc-W0-Hp5" id="ywi-gk-ZOG">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Giant Bombcast 07-02-2013" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nSX-lY-aJg">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bEm-aC-Rs5">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">Jeff, Brad, and Drew sit back and spin a yarn about surfing, the Saints, Don Mattrick, the infinite power of cloud magic, and... sure, numbers stations. Why not?</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="bEm-aC-Rs5" id="wZM-ez-eh1"/>
+                                    <outlet property="titleLabel" destination="nSX-lY-aJg" id="L2r-8g-Bbu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wym-ab-Mp3" id="n36-RN-jrj"/>
+                            <outlet property="delegate" destination="wym-ab-Mp3" id="cuI-An-QiE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Bombcasts" id="fc7-Iy-mEg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgl-hq-lYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="467"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d9G-qQ-oGQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="isk-lv-Fng" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g10-vZ-iyy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wym-ab-Mp3" kind="relationship" relationship="rootViewController" id="cMI-LQ-jPa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Utx-1f-Neg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="467"/>
+        </scene>
+    </scenes>
+</document>
