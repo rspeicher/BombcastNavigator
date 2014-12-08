@@ -23,6 +23,10 @@ class BombcastTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func randomBombcast(sender: AnyObject) {
+        self.tableView.selectRowAtIndexPath(viewModel.randomIndexPath, animated: true, scrollPosition: .Middle)
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

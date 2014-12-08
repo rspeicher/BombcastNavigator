@@ -22,6 +22,14 @@ public extension BombcastTableViewModel {
         return bombcasts.count
     }
 
+    var randomIndex: Int {
+        return Int(arc4random_uniform(UInt32(numberOfRows)))
+    }
+
+    var randomIndexPath: NSIndexPath {
+        return NSIndexPath(forRow: randomIndex, inSection: 0)
+    }
+
     func viewModelForIndexPath(indexPath: NSIndexPath) -> BombcastViewModel? {
         let index = indexPath.item
         if index < numberOfRows {

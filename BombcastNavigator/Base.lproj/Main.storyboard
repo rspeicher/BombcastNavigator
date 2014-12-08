@@ -27,7 +27,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bEm-aC-Rs5">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <string key="text">Jeff, Brad, and Drew sit back and spin a yarn about surfing, the Saints, Don Mattrick, the infinite power of cloud magic, and... sure, numbers stations. Why not?</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -44,7 +44,19 @@
                             <outlet property="delegate" destination="wym-ab-Mp3" id="cuI-An-QiE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bombcasts" id="fc7-Iy-mEg"/>
+                    <navigationItem key="navigationItem" title="Bombcasts" id="fc7-Iy-mEg">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="7Ab-dN-4hu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rfg-Kv-Hjq">
+                                <rect key="frame" x="562" y="11" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="shuffle"/>
+                                <connections>
+                                    <action selector="randomBombcast:" destination="wym-ab-Mp3" eventType="touchUpInside" id="jIL-zd-2uQ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgl-hq-lYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,4 +81,7 @@
             <point key="canvasLocation" x="366" y="467"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shuffle" width="20" height="20"/>
+    </resources>
 </document>
