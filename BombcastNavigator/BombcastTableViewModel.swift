@@ -30,7 +30,7 @@ public extension BombcastTableViewModel {
         return NSIndexPath(forRow: randomIndex, inSection: 0)
     }
 
-    func viewModelForIndexPath(indexPath: NSIndexPath) -> BombcastViewModel? {
+    func forIndexPath(indexPath: NSIndexPath) -> BombcastViewModel? {
         let index = indexPath.item
         if index < numberOfRows {
             return BombcastViewModel(bombcast: bombcasts[indexPath.row])

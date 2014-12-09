@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="isk-lv-Fng">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Bombcasts-->
@@ -36,6 +37,7 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="bEm-aC-Rs5" id="wZM-ez-eh1"/>
                                     <outlet property="titleLabel" destination="nSX-lY-aJg" id="L2r-8g-Bbu"/>
+                                    <segue destination="bc7-zQ-Vl0" kind="show" identifier="BombcastDetail" id="3Yt-NV-5EH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,6 +64,71 @@
             </objects>
             <point key="canvasLocation" x="1070" y="467"/>
         </scene>
+        <!--Bombcast Detail View Controller-->
+        <scene sceneID="tXw-gA-jSy">
+            <objects>
+                <viewController id="bc7-zQ-Vl0" customClass="BombcastDetailViewController" customModule="BombcastNavigator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U3D-pD-NdB"/>
+                        <viewControllerLayoutGuide type="bottom" id="LLU-kr-w1C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WN0-5u-q8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giant Bombcast 07-02-2013" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWQ-7s-vJV">
+                                <rect key="frame" x="16" y="72" width="568" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvc-mk-N47">
+                                <rect key="frame" x="16" y="109" width="568" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="145" id="iJP-qh-9yS"/>
+                                </constraints>
+                                <string key="text">Jeff, Brad, and Drew sit back and spin a yarn about surfing, the Saints, Don Mattrick, the infinite power of cloud magic, and... sure, numbers stations. Why not?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iJP-qh-9yS"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cja-JF-lO2">
+                                <rect key="frame" x="16" y="536" width="568" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="H1U-1T-kfk"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="4Vh-RN-wJq" kind="embed" identifier="EmbeddedPlayer" id="VIg-Ua-eGh"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pWQ-7s-vJV" firstAttribute="trailing" secondItem="WN0-5u-q8Z" secondAttribute="trailingMargin" id="A2r-7Z-qBP"/>
+                            <constraint firstItem="LLU-kr-w1C" firstAttribute="top" secondItem="Cja-JF-lO2" secondAttribute="bottom" constant="20" id="I4n-ac-J4K"/>
+                            <constraint firstItem="Qvc-mk-N47" firstAttribute="top" secondItem="pWQ-7s-vJV" secondAttribute="bottom" constant="8" id="Knb-hp-HH2"/>
+                            <constraint firstItem="pWQ-7s-vJV" firstAttribute="leading" secondItem="WN0-5u-q8Z" secondAttribute="leadingMargin" id="WkO-i4-czf"/>
+                            <constraint firstItem="Qvc-mk-N47" firstAttribute="width" secondItem="Cja-JF-lO2" secondAttribute="width" id="bhE-Hd-ddL"/>
+                            <constraint firstItem="pWQ-7s-vJV" firstAttribute="top" secondItem="U3D-pD-NdB" secondAttribute="bottom" constant="8" id="dQK-lw-zsg"/>
+                            <constraint firstItem="Cja-JF-lO2" firstAttribute="leading" secondItem="WN0-5u-q8Z" secondAttribute="leadingMargin" id="mtE-Qw-jcW"/>
+                            <constraint firstItem="Qvc-mk-N47" firstAttribute="leading" secondItem="WN0-5u-q8Z" secondAttribute="leadingMargin" id="nwS-jZ-gtQ"/>
+                            <constraint firstItem="Qvc-mk-N47" firstAttribute="trailing" secondItem="WN0-5u-q8Z" secondAttribute="trailingMargin" id="tJj-7L-fAx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Qvc-mk-N47" id="nio-gh-WpE"/>
+                        <outlet property="titleLabel" destination="pWQ-7s-vJV" id="fpa-uw-TTD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovt-69-zfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="1167"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="d9G-qQ-oGQ">
             <objects>
@@ -79,6 +146,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Utx-1f-Neg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="366" y="467"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="p0A-e3-Zf6">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="4Vh-RN-wJq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkn-hQ-KVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="1445"/>
         </scene>
     </scenes>
     <resources>

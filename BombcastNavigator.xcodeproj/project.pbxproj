@@ -25,6 +25,7 @@
 		929D3F921A365D73009728C3 /* BombcastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D3F911A365D73009728C3 /* BombcastTableViewCell.swift */; };
 		929D3F951A365DED009728C3 /* BombcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D3F941A365DED009728C3 /* BombcastViewModel.swift */; };
 		929D3F971A365EE7009728C3 /* BombcastTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D3F961A365EE7009728C3 /* BombcastTableViewModel.swift */; };
+		929D3F9A1A366BE2009728C3 /* BombcastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D3F991A366BE2009728C3 /* BombcastDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		929D3F911A365D73009728C3 /* BombcastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BombcastTableViewCell.swift; sourceTree = "<group>"; };
 		929D3F941A365DED009728C3 /* BombcastViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BombcastViewModel.swift; sourceTree = "<group>"; };
 		929D3F961A365EE7009728C3 /* BombcastTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BombcastTableViewModel.swift; sourceTree = "<group>"; };
+		929D3F991A366BE2009728C3 /* BombcastDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BombcastDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		929D3F8D1A365C37009728C3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				929D3F991A366BE2009728C3 /* BombcastDetailViewController.swift */,
 				929D3F8E1A365C55009728C3 /* BombcastTableViewController.swift */,
 			);
 			name = ViewControllers;
@@ -251,8 +254,8 @@
 		929D3F931A365DC4009728C3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				929D3F941A365DED009728C3 /* BombcastViewModel.swift */,
 				929D3F961A365EE7009728C3 /* BombcastTableViewModel.swift */,
+				929D3F941A365DED009728C3 /* BombcastViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				929D3F951A365DED009728C3 /* BombcastViewModel.swift in Sources */,
 				929D3F971A365EE7009728C3 /* BombcastTableViewModel.swift in Sources */,
 				929D3F8F1A365C55009728C3 /* BombcastTableViewController.swift in Sources */,
+				929D3F9A1A366BE2009728C3 /* BombcastDetailViewController.swift in Sources */,
 				929D3F411A3658E4009728C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +746,7 @@
 				929D3F5C1A3658E4009728C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		929D3F5D1A3658E4009728C3 /* Build configuration list for PBXNativeTarget "BombcastNavigatorTests" */ = {
 			isa = XCConfigurationList;
@@ -750,6 +755,7 @@
 				929D3F5F1A3658E4009728C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		929D3F7E1A365916009728C3 /* Build configuration list for PBXNativeTarget "BombcastData" */ = {
 			isa = XCConfigurationList;
@@ -758,6 +764,7 @@
 				929D3F801A365916009728C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		929D3F821A365916009728C3 /* Build configuration list for PBXNativeTarget "BombcastDataTests" */ = {
 			isa = XCConfigurationList;
@@ -766,6 +773,7 @@
 				929D3F841A365916009728C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

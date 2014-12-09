@@ -40,10 +40,17 @@ class BombcastTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("BombcastCell", forIndexPath: indexPath) as BombcastTableViewCell
 
-        if let cellViewModel = viewModel.viewModelForIndexPath(indexPath) {
+        if let cellViewModel = viewModel.forIndexPath(indexPath) {
             cell.configureWithViewModel(cellViewModel)
         }
 
         return cell
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "BombcastDetail" {
+            let detail = segue.destinationViewController as BombcastDetailViewController
+            detail.viewModel = viewModel.forIndexPath(tableView.indexPathForSelectedRow()!)
+        }
     }
 }
