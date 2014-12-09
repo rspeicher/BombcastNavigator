@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Bombcasts-->
+        <!--Bombcasts Table View Controller-->
         <scene sceneID="PXF-Az-X4X">
             <objects>
-                <tableViewController id="wym-ab-Mp3" customClass="BombcastTableViewController" customModule="BombcastNavigator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Bombcasts Table View Controller" id="wym-ab-Mp3" customClass="BombcastTableViewController" customModule="BombcastNavigator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="kW2-E7-cze">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="366" y="467"/>
         </scene>
-        <!--AV Player View Controller-->
+        <!--Embedded Bombcast Player Controller-->
         <scene sceneID="p0A-e3-Zf6">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="4Vh-RN-wJq" sceneMemberID="viewController"/>
+                <avPlayerViewController title="Embedded Bombcast Player Controller" videoGravity="AVLayerVideoGravityResizeAspect" id="4Vh-RN-wJq" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkn-hQ-KVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1726" y="1445"/>
